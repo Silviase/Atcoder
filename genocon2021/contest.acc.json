@@ -1,0 +1,49 @@
+{
+  "contest": {
+    "id": "genocon2021",
+    "title": "Genocon2021 ー DNA Sequence Analysis Challenge",
+    "url": "https://atcoder.jp/contests/genocon2021"
+  },
+  "tasks": [
+    {
+      "id": "genocon2021_a",
+      "label": "A",
+      "title": "Practice 1",
+      "url": "https://atcoder.jp/contests/genocon2021/tasks/genocon2021_a",
+      "directory": {
+        "path": "a",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "genocon2021_b",
+      "label": "B",
+      "title": "Practice 2",
+      "url": "https://atcoder.jp/contests/genocon2021/tasks/genocon2021_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "genocon2021_c",
+      "label": "C",
+      "title": "Practice 3",
+      "url": "https://atcoder.jp/contests/genocon2021/tasks/genocon2021_c",
+      "directory": {
+        "path": "c",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "genocon2021_d",
+      "label": "D",
+      "title": "This will be released on August 28 (DO NOT SUBMIT!)",
+      "url": "https://atcoder.jp/contests/genocon2021/tasks/genocon2021_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
+    }
+  ]
+}
