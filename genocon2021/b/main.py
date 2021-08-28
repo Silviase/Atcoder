@@ -20,18 +20,14 @@ def alignment(s, t):
 
     for i in range(len(s)):
         for j in range(len(t)):
-            dp[i + 1][j +
-                      1], bef[i +
-                              1][j +
-                                 1] = dp[i][j] + similarity(s[i], t[j]), (i, j)
+            dp[i + 1][j + 1] = dp[i][j] + similarity(s[i], t[j])
+            bef[i + 1][j + 1] = (i, j)
             if dp[i + 1][j] + similarity(s[i], "-") > dp[i + 1][j + 1]:
-                dp[i + 1][j + 1], bef[i + 1][j +
-                                             1] = dp[i + 1][j] + similarity(
-                                                 s[i], "-"), (i + 1, j)
+                dp[i + 1][j + 1] = dp[i + 1][j] + similarity(s[i], "-")
+                bef[i + 1][j + 1] = (i + 1, j)
             if dp[i][j + 1] + similarity("-", t[j]) > dp[i + 1][j + 1]:
-                dp[i + 1][j + 1], bef[i + 1][j +
-                                             1] = dp[i][j + 1] + similarity(
-                                                 "-", t[j]), (i, j + 1)
+                dp[i + 1][j + 1] = dp[i][j + 1] + similarity("-", t[j])
+                bef[i + 1][j + 1] = (i, j + 1)
     return dp, bef
 
 
