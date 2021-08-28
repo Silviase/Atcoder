@@ -59,15 +59,18 @@ aligned_genoms = []
 for _ in range(N):
     genoms.append(input())
 
-dp, prev = alignment(genoms[0], genoms[1], False)
-g1, g2 = backtrack(genoms[0], genoms[1], prev)
-aligned_genoms.append(g1)
-aligned_genoms.append(g2)
-max_len = max(max_len, len(g1))
+shortest = min(genoms, key=len)
+longest = max(genoms, key=len)
+dp, prev = alignment(shortest, longest, forbid_s_gap=False)
+alinged_shortest, alinged_longest = backtrack(shortest, longest, prev)
 
-for i in range(2, N):
-    dp, prev = alignment(g1, genoms[i], True)
-    g1, g2 = backtrack(g1, genoms[i], prev)
+# print(alinged_shortest)
+# print(alinged_longest)
+# print("<<<<----->>>>")
+
+for i in range(N):
+    dp, prev = alignment(alinged_shortest, genoms[i], True)
+    g1, g2 = backtrack(alinged_shortest, genoms[i], prev)
     aligned_genoms.append(g2)
     max_len = max(max_len, len(g1))
 
